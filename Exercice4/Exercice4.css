@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+header,
+footer {
+    padding: 10px;
+    background-color: skyblue;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    border: 5px solid black;
+    min-width: 90vw;
+}
+
+
+/* Navigation */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+
+/* Eléments principaux de la page */
+
+
+/* Body */
+
+main {
+    display: flex;
+    min-height: 60vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* Sections */
+
+.menu-section {
+    background-color: violet;
+    border: 5px solid black;
+    min-width: 10vw;
+}
+
+.content-section {
+    background-color: pink;
+    border: 5px solid black;
+    min-width: 76vw;
+    font-size: 1.5em;
+    color: black;
+}
+
+.advertise-section {
+    background-color: violet;
+    border: 5px solid black;
+    min-width: 10vw;
+    font-size: 1.5em;
+    color: black;
+}
+
+
+/* Media Query écran < 750 Pixels */
+
+@media screen and (max-width:750px) {
+    main {
+        flex-direction: column;
+        /*height: auto;*/
+    }
+    .content-section {
+        order: 0;
+        text-align: center;
+    }
+    .menu-section {
+        order: 1;
+        text-align: center;
+        padding: 20px;
+    }
+    .advertise-section {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/* Media Query 750 Pixels < écran < 1050 Pixels */
+
+@media screen and (min-width:750px) and (max-width:1050px) {
+    header,
+    footer {
+        background-color: lawngreen;
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        border: 5px solid black;
+        width: 100%
+    }
+    main {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    /* Sections */
+    .menu-section {
+        background-color: orangered;
+        border: 5px solid black;
+        min-width: 15%;
+    }
+    .content-section {
+        flex: 1 0 70%;
+        background-color: burlywood;
+        border: 5px solid black;
+        min-width: 69%
+    }
+    .advertise-section {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: space-between;
+        background-color: blue;
+        border: 5px solid black;
+        min-width: 15%
+    }
+}
